@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.body{
+        text-decoration: none;
+        font-family:'Times New Roman', Times, serif ;
+        background-color: #d3d3d3; /* Light gray background */
+    
+    
+
+    }
+
+.navbar{
+    height: auto;
+    background-color: rgb(153, 153, 219);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position:fixed;
+    width: 100%;
+    display: flex;
+    z-index: 999;
+    margin-top: 0;
+}
+#navsections{
+    margin-left: 20px;
+    text-decoration: none;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+h4{
+    font-family:'Times New Roman', Times, serif ;
+}
+#cart{
+    margin-left: 780px;
+}
+#userlogo{
+    margin-left: 40px;
+}
+#fuck{
+    margin-top: 0px;
+    height: 40px;
+}
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav div {
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav div:hover {
+    color: #ff3f6c;
+}
+
+/* Dropdown Container */
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 250px;
+    z-index: 1000;
+    padding: 15px;
+}
+
+.dropdown-menu h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dropdown-menu p {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.dropdown-menu button {
+    width: 100%;
+    background-color: #ff3f6c;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-menu button:hover {
+    background-color: #e63652;
+}
+
+.dropdown-menu hr {
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+    color: #ff3f6c;
+}
+
+/* Myntra Insider Badge */
+.new-badge {
+    background-color: #ff3f6c;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+#fuck{
+    margin-top: 0px;
+    height: 40px;
+}
+#login{
+    margin-bottom: 5px;
+}
+.login-container {
+    background-color: #b7cfd3; /* Light blue-gray */
+    padding: 40px;
+    border-radius: 5px;
+    width: 500px;
+    margin-top: 150px;
+    margin-left: 350px;
+}
+
+h1 {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+}
+
+p {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin-bottom: 15px;
+    background-color: #d3d3d3;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #d3d3d3;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover {
+    background-color: #c0c0c0;
+}

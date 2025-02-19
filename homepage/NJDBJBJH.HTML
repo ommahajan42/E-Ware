@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown Menu Example</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 0;
+  }
+  .user-menu {
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+  }
+  .user-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    cursor: pointer;
+  }
+  .dropdown {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 9999;
+    width: 250px;
+    padding: 15px;
+  }
+  .dropdown.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  .dropdown h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .dropdown p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  .login-btn {
+    display: inline-block;
+    background-color: #ff3e6c;
+    color: white;
+    padding: 8px 16px;
+    border: 1px solid #ff3e6c;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .dropdown a {
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    color: black;
+    transition: background 0.3s;
+  }
+  .dropdown a:hover {
+    background-color: #f0f0f0;
+  }
+  .new-badge {
+    background-color: #ff3e6c;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 5px;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="user-menu">
+  <div class="user-logo"></div>
+  <div class="dropdown" id="dropdownMenu">
+    <h3>Welcome</h3>
+    <p>To access account and manage orders</p>
+    <a href="#" class="login-btn">LOGIN / SIGNUP</a>
+    <hr>
+    <a href="#">Orders</a>
+    <a href="#">Wishlist</a>
+    <a href="#">Gift Cards</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Myntra Insider <span class="new-badge">NEW</span></a>
+    <hr>
+    <a href="#">Myntra Credit</a>
+    <a href="#">Coupons</a>
+    <a href="#">Saved Cards</a>
+    <a href="#">Saved VPA</a>
+    <a href="#">Saved Addresses</a>
+  </div>
+</div>
+
+<script>
+  const userLogo = document.querySelector('.user-logo');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  // Toggle dropdown only on user logo click
+  userLogo.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>
