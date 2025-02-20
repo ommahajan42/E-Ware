@@ -3,20 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-<style>
-*{
+    <title>Sign Up</title>
+   <style>
+    body {
     margin: 0;
     padding: 0;
+    background-color: white;
+    font-family: Arial, sans-serif;
 }
-.body{
-        text-decoration: none;
-        font-family:'Times New Roman', Times, serif ;
-        background-color: #d3d3d3; /* Light gray background */
-    
-    
-
-    }
 
 .navbar{
     height: auto;
@@ -156,65 +150,59 @@ h4{
     margin-top: 0px;
     height: 40px;
 }
-#login{
-    margin-bottom: 5px;
-}
-.login-container {
-    background-color: #b7cfd3; /* Light blue-gray */
-    padding: 40px;
-    border-radius: 5px;
-    width: 500px;
-    margin-top: 150px;
-    margin-left: 350px;
+
+.signup-container {
+    background-color: #d4eff4;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    font-size: 24px;
-    color: white;
-    margin: 0;
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
 p {
     font-size: 14px;
-    color: black;
-    margin-bottom: 20px;
+    color: #000000;
 }
 
-label {
-    display: block;
-    font-size: 14px;
-    color: white;
-    margin-bottom: 5px;
-}
-
-input {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
     width: 100%;
     padding: 10px;
+    margin: 10px 0;
     border: none;
-    margin-bottom: 15px;
-    background-color: #d3d3d3;
+    background-color: #e8e8e8;
+    color: #000;
+    font-size: 16px;
 }
 
-.submit-btn {
-    width: 100%;
-    padding: 10px;
+input[type="submit"] {
+    background-color: #d8d8d8;
+    color: #ffffff;
     border: none;
-    background-color: #d3d3d3;
+    padding: 10px 20px;
+    font-size: 18px;
     cursor: pointer;
-    font-size: 14px;
-    text-transform: uppercase;
+    display: block;
+    margin-top: 15px;
 }
 
-.submit-btn:hover {
+input[type="submit"]:hover {
     background-color: #c0c0c0;
 }
-</style>
-    <script src="/hardware_corp/templates/login.js"></script>
+   </style>
 </head>
 <body>
-    
+       
     <div class="navbar">
-        <div id="logo"><img src="{{ logo }}" height="35px"width="35px" alt="logo"></div>
+        <div id="logo"><img src="images/trolley.png" height="35px"width="35px" alt="logo"></div>
         <div><h4>E-Ware</h4></div>
         <div id="navsections"><a href="home.html">Home</a> </div>
         <div id="navsections"><a href="#">service</a></div>
@@ -223,7 +211,7 @@ input {
         <div id="cart">🛒</div>
         <div class="nav">
             <div class="profile-container">
-                <div onclick="toggleDropdown()"><img src="{{ user }}"height="35"width="35"></div>
+                <div onclick="toggleDropdown()"><img src="images/user-286.png"height="35"width="35"></div>
                 <div class="dropdown-menu" id="dropdownMenu">
                     <h3>Welcome</h3>
                     <p>To access account and manage profile</p>
@@ -246,30 +234,32 @@ input {
         </div>
     </div>
     <div id="fuck"> Lorem ipsum dolor sit ametsectetur adim libero nobis voluptas pariatur fugiat aliquam sit iste assumenda quisquam nisi? Quisquam impedit laudantium recusandae totam cupiditate officia.</div>
-<div class="login-container">
-    <title>Login</title>
+    <div class="signup-container">
+        <title>Register</title>
 
-    <h2>Login</h2>
-    <form action="/login" method="POST">
-        <label>Email:</label>
-        <input type="email" name="email" required><br>
 
-        <label>Password:</label>
-        <input type="password" name="password" required><br>
-
-        <input type="submit" value="login">
+    <h2>Sign Up</h2>
+    <form action="/signup" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Register">
     </form>
-    <h2>Are you register? <a href="/">Sign Up here</a></h2>
+    <h2>Already a member? <a href="/login">Login Here</a></h2>
     <script>
-        function toggleDropdown() {
-            var dropdown = document.getElementById("dropdownMenu");
-            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-        }
-        window.onclick = function(event) {
-            if (!event.target.closest('.profile-container')) {
-                document.getElementById("dropdownMenu").style.display = "none";
-            }
-        }
+        
+function toggleDropdown() {
+    var dropdown = document.getElementById("dropdownMenu");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+}
+window.onclick = function(event) {
+    if (!event.target.closest('.profile-container')) {
+        document.getElementById("dropdownMenu").style.display = "none";
+    }
+}
     </script>
 </body>
 </html>

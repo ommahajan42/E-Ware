@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ware</title>
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-decoration: none;
+    font-family:'Times New Roman', Times, serif ;
+    background-color: #CBD0EC;
+}
+ /*the nav bar*/
+.navbar{
+    height: auto;
+    background-color: rgb(153, 153, 219);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position:fixed;
+    width: 100%;
+    display: flex;
+    z-index: 999;
+    
+}
+#navsections{
+    margin-left: 20px;
+    text-decoration: none;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+h4{
+    font-family:'Times New Roman', Times, serif ;
+}
+#cart{
+    margin-left: 67%;
+}
+#userlogo{
+    margin-left: 80px;
+}
+#fuck{
+    margin-top: 0px;
+    height: 40px;
+}
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav div {
+    margin-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav div:hover {
+    color: #ff3f6c;
+}
+
+/* Dropdown Container */
+.profile-container {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+}
+
+/* Dropdown Content */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 250px;
+    z-index: 1000;
+    padding: 15px;
+}
+
+.dropdown-menu h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dropdown-menu p {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.dropdown-menu button {
+    width: 100%;
+    background-color: #ff3f6c;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-menu button:hover {
+    background-color: #e63652;
+}
+
+.dropdown-menu hr {
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+    color: #ff3f6c;
+}
+
+/* Myntra Insider Badge */
+.new-badge {
+    background-color: #ff3f6c;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+#login{
+    margin-bottom: 5px;
+}
+ 
+/* THE SCROLL PANEL*/
+  
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; 
+    
+}
+.scroll-container {
+    width: 100%;
+    height: 500px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background: #ddd;
+    position: relative;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    scroll-behavior: smooth;
+    
+}
+.card {
+    flex: 0 0 100%;
+    height: 786px;
+    background: rgb(226, 195, 195);
+    padding: 15px;
+    border-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    scroll-snap-align: center;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+ /* FAMOS ITEMS*/
+ 
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+.active {
+    background-color: #717171;
+}
+.container9 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+.scroll-area {
+    display: flex;
+    gap: 20px;
+    background: #eee;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: grab;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+.scroll-area::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari */
+}
+.item {
+    min-width: 200px;
+    height: 300px;
+    background: #d89;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.container12 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+.scroll-area1 {
+    display: flex;
+    gap: 20px;
+    background: #eee;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: grab;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+.scroll-area1::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari */
+}
+.item1 {
+    min-width: 300px;
+    height: 500px;
+    background: #d89;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.container123 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+.scroll-area12 {
+    display: flex;
+    gap: 10px;
+    background: #eee;
+    padding: 20px;
+    border-radius: 0px;
+    cursor: grab;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+.scroll-area12::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari */
+}
+.item12 {
+    min-width: 200px;
+    height: 400px;
+    background: #d89;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container1 {
+    width: 90%;
+    margin-top: 200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #bbdbed;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: left;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    display: flex;
+    gap: 20px;
+    background: #eee;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: grab;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 96.5%;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+
+.product-card {
+    background: #89c0e0;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    height: 300PX;
+    
+    
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200PX;
+
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.product-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #fff;
+    background: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 300PX;
+}
+
+.product-card a:hover {
+    background: #0056b3;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.fotter{
+    height: 300px;
+    background-color: #333;
+    width: 100%;
+}  
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div id="logo"><img src="images/trolley.png" height="35px"width="35px" alt="logo"></div>
+        <div><h4>E-Ware</h4></div>
+        <div id="navsections"><a href="home.html">Home</a> </div>
+        <div id="navsections"><a href="#">service</a></div>
+        <div id="navsections"><a href="#">contact</a></div>
+        <div id="navsections"><a href="#">about us</a></div>
+        <div id="cart">🛒</div>
+        <div class="nav">
+            <div class="profile-container">
+                <div onclick="toggleDropdown()"><img src="images/user-286.png"height="35"width="35"></div>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <h3>Welcome</h3>
+                    <p>To access account and manage profile</p>
+                    <button id="login"><A href="login/sighnup/login.html">LOGIN</A></button>
+                    <button><A href="login/sighnup/signup.html">sighnup</A></button>
+                    <hr>
+                    <a href="#">Orders</a>
+                    <a href="#">Wishlist</a>
+                    <a href="#">Gift Cards</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Myntra Insider <span class="new-badge">NEW</span></a>
+                    <hr>
+                    <a href="#">Myntra Credit</a>
+                    <a href="#">Coupons</a>
+                    <a href="#">Saved Cards</a>
+                    <a href="#">Saved VPA</a>
+                    <a href="#">Saved Addresses</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="fuck">Lorem ipsumnfkjrk dolor sit amadipisicing rkggnjknjernrnjknelit. At culpa eaque rerum numqu qui a temporibus corpofdeknrhbnfderklbfrjhfreuibferwjkjerfgam suscipit iure iusto asperiores, soluta reprehenderit?</div>
+    <Div id="panel">
+    </Div>
+    <div class="container">
+        <div class="scroll-container" id="scrollContainer">
+            <div class="card">
+                <img src="https://via.placeholder.com/1253x786" alt="Image 1">
+                <h3>Product 1</h3>
+                <p>Short description of product 1.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/1253x786" alt="Image 2">
+                <h3>Product 2</h3>
+                <p>Short description of product 2.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/1253x786" alt="Image 3">
+                <h3>Product 3</h3>
+                <p>Short description of product 3.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/1253x786" alt="Image 4">
+                <h3>Product 4</h3>
+                <p>Short description of product 4.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="dots" id="dotsContainer"></div>
+    <div class="categiry">
+    </div>
+    <div class="container9">
+        <div class="scroll-area" id="scrollArea">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+        </div>
+    </div>
+    <div class="container12">
+        <div class="scroll-area1" id="scrollArea1">
+            <div class="item1">1</div>
+            <div class="item1">2</div>
+            <div class="item1">3</div>
+            <div class="item1">4</div>
+            <div class="item1">5</div>
+            <div class="item1">6</div>
+            <div class="item1">7</div>
+        </div>
+    </div>
+    <div class="container123">
+        <div class="scroll-area12" id="scrollArea12">
+            <div class="item12">1</div>
+            <div class="item12">2</div>
+            <div class="item12">3</div>
+            <div class="item12">4</div>
+            <div class="item12">5</div>
+            <div class="item12">6</div>
+            <div class="item12">7</div>
+        </div>
+    </div>
+     
+
+<div class="container1">
+   
+    <div class="grid">
+        <div class="product-card">
+            <img src="pvc/pvc 1.png" alt="PVC Pipes">
+            <h3>PVC Pipes</h3>
+            <a href="#">See More</a>
+        </div>
+        <div class="product-card">
+            <img src="images/trolley.png" alt="UPVC Pipes">
+            <h3>CPVC Pipes</h3>
+            <a href="#">See More</a>
+        </div>
+        <div class="product-card">
+            <img src="upvc/aqva pipes.png" alt="upvc Pipes" height="200PX"width="200PX">
+            <h3>UPVC Pipes</h3>
+            <a href="#">See More</a>
+        </div>
+        <div class="product-card">
+            <img src="hms.jpeg" alt="HMS Pipes">
+            <h3>HMS Pipes</h3>
+            <a href="#">See More</a>
+        </div>
+        <div class="product-card">
+            <img src="lms.jpeg" alt="LMS Pipes">
+            <h3>LMS Pipes</h3>
+            <a href="#">See More</a> </div>
+            <div class="product-card">
+                <img src="mms.png" alt="MMS Pipes">
+                <h3>MMS Pipes</h3>
+                <a href="#">See More</a> </div>
+                <div class="product-card">
+                    <img src="lms.jpeg" alt="LMS Pipes">
+                    <h3>LMS Pipes</h3>
+                    <a href="#">See More</a> </div>
+                    <div class="product-card">
+                        <img src="lms.jpeg" alt="LMS Pipes">
+                        <h3>LMS Pipes</h3>
+                        <a href="#">See More</a> </div>
+                        <div class="product-card">
+                            <img src="lms.jpeg" alt="LMS Pipes">
+                            <h3>LMS Pipes</h3>
+                            <a href="#">See More</a> </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container123">
+    <div class="scroll-area12" id="scrollArea12">
+        <div class="item12">1</div>
+        <div class="item12">2</div>
+        <div class="item12">3</div>
+        <div class="item12">4</div>
+        <div class="item12">5</div>
+        <div class="item12">6</div>
+        <div class="item12">7</div>
+    </div></div>
+    <div class="container123">
+        <div class="scroll-area12" id="scrollArea12">
+            <div class="item12">1</div>
+            <div class="item12">2</div>
+            <div class="item12">3</div>
+            <div class="item12">4</div>
+            <div class="item12">5</div>
+            <div class="item12">6</div>
+            <div class="item12">7</div>
+        </div></div>
+        <div class="container123">
+            <div class="scroll-area12" id="scrollArea12">
+                <div class="item12">1</div>
+                <div class="item12">2</div>
+                <div class="item12">3</div>
+                <div class="item12">4</div>
+                <div class="item12">5</div>
+                <div class="item12">6</div>
+                <div class="item12">7</div>
+            </div></div>
+            <DIV class="fotter">
+                
+            </DIV>
+
+  <script>
+   const scrollArea = document.getElementById("scrollArea");
+let isDown = false;
+let startX;
+let scrollLeft;
+
+scrollArea.addEventListener("mousedown", (e) => {
+    isDown = true;
+    scrollArea.style.cursor = "grabbing";
+    startX = e.pageX - scrollArea.offsetLeft;
+    scrollLeft = scrollArea.scrollLeft;
+});
+
+scrollArea.addEventListener("mouseleave", () => {
+    isDown = false;
+    scrollArea.style.cursor = "grab";
+});
+
+scrollArea.addEventListener("mouseup", () => {
+    isDown = false;
+    scrollArea.style.cursor = "grab";
+});
+
+scrollArea.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - scrollArea.offsetLeft;
+    const walk = (x - startX) * 2;
+    scrollArea.scrollLeft = scrollLeft - walk;
+});
+function toggleDropdown() {
+    var dropdown = document.getElementById("dropdownMenu");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+}
+window.onclick = function(event) {
+    if (!event.target.closest('.profile-container')) {
+        document.getElementById("dropdownMenu").style.display = "none";
+    }
+}
+ 
+  </script>
+</body>
+</html>
